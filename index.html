@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness and Environmental Data Treemap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header-container">
+        <h1>TREEMAP OF HAPPINESS</h1>
+        <div id="description-container">
+            <p>The bluer, the happier. The bigger, the higher their</p>
+            <!-- Dropdown for sorting options -->
+            <select id="sortOptions">
+                <option value="Happiness score">Happiness Score</option>
+                <option value="Log GDP per capita">GDP per Capita</option>
+                <option value="Social support">Social Support</option>
+                <option value="Healthy life expectancy at birth">Healthy Life Expectancy</option>
+                <option value="Freedom to make life choices">Freedom to Make Life Choices</option>
+                <option value="Generosity">Generosity</option>
+                <option value="Perceptions of corruption">Perceptions of Corruption</option>
+                <option value="EPI.new">EPI Score</option>
+                <option value="HLT.new">Environmental Health</option>
+                <option value="AIR.new">Air Quality Score</option>
+                <option value="H2O.new">Water Quality Score</option>
+                <option value="COE.new">CO2 Emissions Score</option>
+                <option value="BDH.new">Biodiversity & Habitat Score</option>
+                <option value="Population (2020)">Population</option>
+            </select>
+            <p>  ...  Click on a country!</p>
+        </div>
+    </div>
+    
+    <!-- Container for the primary treemap -->
+    <div id="treemap-container"></div>
+
+    <!-- Container for the secondary treemap and back button -->
+    <div id="secondary-treemap-container" style="display:none;">
+        <button id="back-button">Back</button>
+        <div id="secondary-treemap-description">
+            <p>The bigger, the more the factor correlates with happiness. The bluer, the higher they score in that factor.</p>
+        </div>
+        <div id="secondary-treemap"></div>
+    </div>
+    
+
+    <!-- D3.js library and JavaScript file -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
